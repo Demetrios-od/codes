@@ -7,7 +7,7 @@ polys = [0x11d, 0x12b, 0x12d, 0x14d, 0x15f, 0x163, 0x165, 0x169, 0x171, 0x187, 0
 
 for poly in polys:
     gf = gfield.gfield(poly)
-    bch_gpoly = bch.ebch.generator_polynomial(gf, D)
+    bch_gpoly = bch.bch_generator_polynomial(gf, D)
     print('poly = ', poly, ', wt = ', len(bch_gpoly['powers']), sep='')
     print('powers =', bch_gpoly['powers'])
     print('zeros =', bch_gpoly['zeros'])
